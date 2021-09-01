@@ -33,10 +33,6 @@ typedef struct point{
 } APPLE;
 
 
-
-
-
-
 void CreateTable(char***,int,int);
 void DestroyTable(char***,int);	
 void fillmap(char **map,int h,int w);
@@ -324,13 +320,9 @@ void isCollide(SNAKE *snake,char *f){
 		
 		
 	}
-	
-	
-	
+			
 	
 }
-
-
 
 
 
