@@ -38,6 +38,7 @@ typedef struct point{
 
 
 void CreateTable(char***,int,int);
+void DestroyTable(char***,int);	
 void fillmap(char **map,int h,int w);
 void makeBox(char **t,int,int);
 void Acceleration(struct obj *point);
@@ -121,7 +122,7 @@ while(flag){
 }
     system("clear");
     printf("YOU LOSE\n");
-    free(t);
+    DestroyTable(&t,h);   
 	
     delay(1500);
     return 0;
@@ -141,6 +142,19 @@ void CreateTable(char ***table,int h,int w){
 	
 	
 }
+
+void DestroyTable(char ***table,int h){
+	
+	int i;
+
+	for(i=0;i<h;i++){
+	  free(*(*table+i)); 
+	}	
+	
+        free(*table);	
+	
+}
+
 
 
 void fillmap(char **map,int h,int w){
